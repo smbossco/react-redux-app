@@ -1,0 +1,39 @@
+{
+  "name": "react-app",
+  "version": "1.0.0",
+  "description": "initial app using react",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "babel": "babel",
+    "webpack": "webpack",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "react",
+    "app"
+  ],
+  "author": "SB",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.14.0",
+    "babel-loader": "^6.2.5",
+    "babel-preset-es2015": "^6.14.0",
+    "babel-preset-react": "^6.11.1",
+    "node-sass": "^3.10.1",
+    "redux-devtools": "^3.3.1",
+    "reload": "^1.0.1",
+    "sass-loader": "^4.0.2",
+    "webpack": "^1.13.2"
+  },
+  "dependencies": {
+    "express": "^4.14.0",
+    "mongodb": "^2.2.10",
+    "node-sass": "^3.10.0",
+    "react": "^15.3.1",
+    "react-dom": "^15.3.1",
+    "react-redux": "^4.4.5",
+    "react-router": "^2.8.1",
+    "redux": "^3.6.0"
+  }
+}
