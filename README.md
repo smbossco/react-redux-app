@@ -1,1 +1,1 @@
-Testing a react app using redux and mongodb
+<h1>Testing a react app using redux and mongodb</h1>
