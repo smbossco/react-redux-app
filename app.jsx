@@ -21,4 +21,4 @@ let App = React.createClass({
   
 });
 
-ReactDOM.render(<App />, document.getElementById('homeApp'));
+module.exports = App;

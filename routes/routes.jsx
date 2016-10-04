@@ -1,17 +1,17 @@
-import React from 'react'
-import { Route, IndexRoute } from 'react-router'
-import App from '../app.jsx'
-import About from './About'
-import Repos from './Repos'
-import Repo from './Repo'
-import Home from './Home'
+import React from 'react';
+import { Route, IndexRoute } from 'react-router';
+import App from '../app.jsx';
+import NavBar from './App_Nav.jsx';
+import CommentBox from './CommentBox.jsx';
+//import Repo from './Repo';
+import Users from './Users.jsx';
 
 module.exports = (
   <Route path="/" component={App}>
-    <IndexRoute component={Home}/>
-    <Route path="/repos" component={Repos}>
-      <Route path="/repos/:userName/:repoName" component={Repo}/>
+    <IndexRoute component={NavBar}/>
+    <Route path="/repos" component={CommentBox}>
+      {/*<Route path="/repos/:userName/:repoName" component={Repo}/>*/}
     </Route>
-    <Route path="/about" component={About}/>
+    <Route path="/about" component={Users}/>
   </Route>
 );

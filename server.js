@@ -2,10 +2,10 @@ const express = require('express'),
                 app = express(), 
                 //path = require('path'),
                 //http = require("http"),
-                react = require("react"),
+                React = require("react"),
                 { renderToString } = require('react-dom/server'),
                 { match, RouterContext } = require('react-router'),
-                routes = require('./modules/routes');
+                routes = require('./routes/routes.jsx');
 
 
 app.get('*', (req, res) => {
@@ -15,6 +15,7 @@ app.get('*', (req, res) => {
     // `props` in its state as it listens to `browserHistory`. But on the
     // server our app is stateless, so we need to use `match` to
     // get these props before rendering.
+    if (err) console.error;
     const appHtml = renderToString(<RouterContext {...props}/>);
 
     // dump the HTML into a template, lots of ways to do this, but none are
@@ -36,7 +37,7 @@ function renderPage(appHtml) {
    `;
 }
 
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT;
 
 app.listen(PORT, function() {
   console.log('Production Express server running at localhost:' + PORT);
