@@ -1,8 +1,5 @@
 "use strict";
 
-var path = require("path");
-var webpack = require("webpack");
-
 module.exports = {
   entry: "./app.jsx",
   output: { path: __dirname, filename: "bundle.js" },
