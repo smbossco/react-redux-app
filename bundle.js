@@ -59,7 +59,7 @@
 
 	var CommentBox = __webpack_require__(235);
 	//let Users = require("./routes/Users.jsx");
-	var NavBar = __webpack_require__(237);
+	var NavBar = __webpack_require__(236);
 	//let appRoutes = require('./routes/routes.jsx');
 	//create the views, then route them, then use ajax calls
 
@@ -71,14 +71,13 @@
 	    return React.createElement(
 	      "div",
 	      null,
-	      React.createElement(NavBar, null),
-	      React.createElement(CommentBox, null)
+	      React.createElement(NavBar, { action: "render", name: "Menu" })
 	    );
 	  }
 
 	});
 
-	ReactDOM.render(React.createElement(App, null), document.getElementById('homeApp'));
+	module.exports = App;
 
 /***/ },
 /* 1 */
@@ -27150,8 +27149,7 @@
 	module.exports = CommentBox;
 
 /***/ },
-/* 236 */,
-/* 237 */
+/* 236 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -27163,15 +27161,23 @@
 
 
 	    render: function render() {
-
+	        //        const name = "Navbar"
 	        return React.createElement(
 	            "h2",
 	            null,
-	            "Navbar render here"
+	            this.props.name,
+	            " ",
+	            this.props.action,
+	            " here?"
 	        );
 	    }
 
 	});
+
+	NavBar.proptypes = {
+	    name: React.PropTypes.string.isRequired,
+	    action: React.PropTypes.string
+	};
 
 	module.exports = NavBar;
 

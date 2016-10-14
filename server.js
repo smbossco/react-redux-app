@@ -1,12 +1,13 @@
 const express = require('express'), 
                 app = express(), 
-                //path = require('path'),
+                path = require('path'),
                 //http = require("http"),
                 React = require("react"),
                 { renderToString } = require('react-dom/server'),
                 { match, RouterContext } = require('react-router'),
                 routes = require('./routes/routes.jsx');
 
+//app.use(path.join(__dirname, "public"));
 
 app.get('*', (req, res) => {
   // match the routes to the url
@@ -40,7 +41,7 @@ function renderPage(appHtml) {
 const PORT = process.env.PORT;
 
 app.listen(PORT, function() {
-  console.log('Production Express server running at localhost:' + PORT);
+  console.log('Production Express server running at localhost: ' + PORT);
 });
 
 /*

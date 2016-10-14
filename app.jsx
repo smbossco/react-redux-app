@@ -13,8 +13,7 @@ let App = React.createClass({
   render: function(){
    return (
        <div>
-        <NavBar />
-        <CommentBox />
+        <NavBar action={"render"} name={"Menu"} />
        </div>
        );
   }

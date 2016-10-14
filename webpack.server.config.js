@@ -6,7 +6,7 @@ let path = require('path');
 module.exports = {
 
   entry: path.resolve(__dirname, 'server.js'),
-
+  watch: true,
   output: {
     filename: 'server.bundle.js'
   },

@@ -48,19 +48,21 @@
 
 	var express = __webpack_require__(1);
 	var app = express();
-	//path = require('path'),
+	var path = __webpack_require__(2);
 	//http = require("http"),
-	var React = __webpack_require__(2);
+	var React = __webpack_require__(3);
 
-	var _require = __webpack_require__(3);
+	var _require = __webpack_require__(4);
 
 	var renderToString = _require.renderToString;
 
-	var _require2 = __webpack_require__(4);
+	var _require2 = __webpack_require__(5);
 
 	var match = _require2.match;
 	var RouterContext = _require2.RouterContext;
-	var routes = __webpack_require__(5);
+	var routes = __webpack_require__(6);
+
+	//app.use(path.join(__dirname, "public"));
 
 	app.get('*', function (req, res) {
 	  // match the routes to the url
@@ -86,7 +88,7 @@
 	var PORT = process.env.PORT;
 
 	app.listen(PORT, function () {
-	  console.log('Production Express server running at localhost:' + PORT);
+	  console.log('Production Express server running at localhost: ' + PORT);
 	});
 
 	/*
@@ -123,45 +125,51 @@
 /* 2 */
 /***/ function(module, exports) {
 
-	module.exports = require("react");
+	module.exports = require("path");
 
 /***/ },
 /* 3 */
 /***/ function(module, exports) {
 
-	module.exports = require("react-dom/server");
+	module.exports = require("react");
 
 /***/ },
 /* 4 */
 /***/ function(module, exports) {
 
-	module.exports = require("react-router");
+	module.exports = require("react-dom/server");
 
 /***/ },
 /* 5 */
+/***/ function(module, exports) {
+
+	module.exports = require("react-router");
+
+/***/ },
+/* 6 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _react = __webpack_require__(2);
+	var _react = __webpack_require__(3);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactRouter = __webpack_require__(4);
+	var _reactRouter = __webpack_require__(5);
 
-	var _app = __webpack_require__(6);
+	var _app = __webpack_require__(7);
 
 	var _app2 = _interopRequireDefault(_app);
 
-	var _App_Nav = __webpack_require__(9);
+	var _App_Nav = __webpack_require__(10);
 
 	var _App_Nav2 = _interopRequireDefault(_App_Nav);
 
-	var _CommentBox = __webpack_require__(8);
+	var _CommentBox = __webpack_require__(9);
 
 	var _CommentBox2 = _interopRequireDefault(_CommentBox);
 
-	var _Users = __webpack_require__(10);
+	var _Users = __webpack_require__(11);
 
 	var _Users2 = _interopRequireDefault(_Users);
 
@@ -177,15 +185,15 @@
 	//import Repo from './Repo';
 
 /***/ },
-/* 6 */
+/* 7 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
 
-	var React = __webpack_require__(2);
-	var ReactDOM = __webpack_require__(7);
+	var React = __webpack_require__(3);
+	var ReactDOM = __webpack_require__(8);
 
-	var _require = __webpack_require__(4);
+	var _require = __webpack_require__(5);
 
 	var Router = _require.Router;
 	var Route = _require.Route;
@@ -193,9 +201,9 @@
 	var Link = _require.Link;
 	var IndexRoute = _require.IndexRoute;
 
-	var CommentBox = __webpack_require__(8);
+	var CommentBox = __webpack_require__(9);
 	//let Users = require("./routes/Users.jsx");
-	var NavBar = __webpack_require__(9);
+	var NavBar = __webpack_require__(10);
 	//let appRoutes = require('./routes/routes.jsx');
 	//create the views, then route them, then use ajax calls
 
@@ -207,8 +215,7 @@
 	    return React.createElement(
 	      "div",
 	      null,
-	      React.createElement(NavBar, null),
-	      React.createElement(CommentBox, null)
+	      React.createElement(NavBar, { action: "render", name: "Menu" })
 	    );
 	  }
 
@@ -217,18 +224,18 @@
 	module.exports = App;
 
 /***/ },
-/* 7 */
+/* 8 */
 /***/ function(module, exports) {
 
 	module.exports = require("react-dom");
 
 /***/ },
-/* 8 */
+/* 9 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
 
-	var React = __webpack_require__(2);
+	var React = __webpack_require__(3);
 
 	var CommentBox = React.createClass({
 	  displayName: "CommentBox",
@@ -269,37 +276,45 @@
 	module.exports = CommentBox;
 
 /***/ },
-/* 9 */
+/* 10 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
 
-	var React = __webpack_require__(2);
+	var React = __webpack_require__(3);
 
 	var NavBar = React.createClass({
 	    displayName: "NavBar",
 
 
 	    render: function render() {
-
+	        //        const name = "Navbar"
 	        return React.createElement(
 	            "h2",
 	            null,
-	            "Navbar render here"
+	            this.props.name,
+	            " ",
+	            this.props.action,
+	            " here?"
 	        );
 	    }
 
 	});
 
+	NavBar.proptypes = {
+	    name: React.PropTypes.string.isRequired,
+	    action: React.PropTypes.string
+	};
+
 	module.exports = NavBar;
 
 /***/ },
-/* 10 */
+/* 11 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
 
-	var React = __webpack_require__(2);
+	var React = __webpack_require__(3);
 
 	var Users = React.createClass({
 	    displayName: "Users",
