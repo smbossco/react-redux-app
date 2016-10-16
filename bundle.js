@@ -27157,26 +27157,104 @@
 	var React = __webpack_require__(1);
 
 	var NavBar = React.createClass({
-	    displayName: "NavBar",
+	  displayName: "NavBar",
 
 
-	    render: function render() {
-	        //        const name = "Navbar"
-	        return React.createElement(
-	            "h2",
-	            null,
-	            this.props.name,
-	            " ",
-	            this.props.action,
-	            " here?"
-	        );
-	    }
+	  render: function render() {
+	    //        const name = "Navbar"
+	    return React.createElement(
+	      "div",
+	      { className: "container" },
+	      React.createElement(
+	        "nav",
+	        { className: "navbar navbar-default" },
+	        React.createElement(
+	          "div",
+	          { className: "container-fluid" },
+	          React.createElement(
+	            "div",
+	            { className: "navbar-header" },
+	            React.createElement(
+	              "button",
+	              { type: "button", className: "navbar-toggle", "data-toggle": "collapse", "data-target": "#myNavbar" },
+	              React.createElement("span", { className: "icon-bar" }),
+	              React.createElement("span", { className: "icon-bar" }),
+	              React.createElement("span", { className: "icon-bar" })
+	            ),
+	            React.createElement(
+	              "a",
+	              { className: "navbar-brand", href: "#" },
+	              "sPP"
+	            )
+	          ),
+	          React.createElement(
+	            "div",
+	            { className: "collapse navbar-collapse", id: "myNavbar" },
+	            React.createElement(
+	              "ul",
+	              { className: "nav navbar-nav" },
+	              React.createElement(
+	                "li",
+	                { className: "active" },
+	                React.createElement(
+	                  "a",
+	                  { href: "#" },
+	                  "Home"
+	                )
+	              ),
+	              React.createElement(
+	                "li",
+	                null,
+	                React.createElement(
+	                  "a",
+	                  { href: "#" },
+	                  "About"
+	                )
+	              ),
+	              React.createElement(
+	                "li",
+	                null,
+	                React.createElement(
+	                  "a",
+	                  { href: "#" },
+	                  "Projects"
+	                )
+	              ),
+	              React.createElement(
+	                "li",
+	                null,
+	                React.createElement(
+	                  "a",
+	                  { href: "#" },
+	                  "Contact"
+	                )
+	              )
+	            ),
+	            React.createElement(
+	              "ul",
+	              { className: "nav navbar-nav navbar-right" },
+	              React.createElement(
+	                "li",
+	                null,
+	                React.createElement(
+	                  "a",
+	                  { href: "#" },
+	                  React.createElement("span", { className: "glyphicon glyphicon-log-in" }),
+	                  " Login"
+	                )
+	              )
+	            )
+	          )
+	        )
+	      )
+	    );
+	  }
 
 	});
 
 	NavBar.proptypes = {
-	    name: React.PropTypes.string.isRequired,
-	    action: React.PropTypes.string
+	  name: React.PropTypes.string.isRequired,
+	  action: React.PropTypes.string
 	};
 
 	module.exports = NavBar;
