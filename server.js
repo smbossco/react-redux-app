@@ -31,7 +31,7 @@ function renderPage(appHtml) {
     <!doctype html public="storage">
     <html>
     <meta charset=utf-8/>
-    <title>My First React Router App</title>
+    <title>React Router App</title>
     <link rel=stylesheet href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
     <div id=app>${appHtml}</div>
    `;

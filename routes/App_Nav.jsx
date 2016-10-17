@@ -3,7 +3,6 @@ let React = require("react");
 let NavBar = React.createClass({
     
     render: function(){
-//        const name = "Navbar"
         return (<div className="container">
         <nav className="navbar navbar-default">
   <div className="container-fluid">

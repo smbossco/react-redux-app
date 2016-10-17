@@ -82,7 +82,7 @@
 	});
 
 	function renderPage(appHtml) {
-	  return '\n    <!doctype html public="storage">\n    <html>\n    <meta charset=utf-8/>\n    <title>My First React Router App</title>\n    <link rel=stylesheet href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">\n    <div id=app>' + appHtml + '</div>\n   ';
+	  return '\n    <!doctype html public="storage">\n    <html>\n    <meta charset=utf-8/>\n    <title>React Router App</title>\n    <link rel=stylesheet href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">\n    <div id=app>' + appHtml + '</div>\n   ';
 	}
 
 	var PORT = process.env.PORT;
@@ -161,7 +161,7 @@
 
 	var _app2 = _interopRequireDefault(_app);
 
-	var _App_Nav = __webpack_require__(10);
+	var _App_Nav = __webpack_require__(11);
 
 	var _App_Nav2 = _interopRequireDefault(_App_Nav);
 
@@ -169,20 +169,17 @@
 
 	var _CommentBox2 = _interopRequireDefault(_CommentBox);
 
-	var _Users = __webpack_require__(11);
-
-	var _Users2 = _interopRequireDefault(_Users);
-
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	//import Repo from './Repo';
+	//import Text from './Text.jsx';
 
 	module.exports = _react2.default.createElement(
 	  _reactRouter.Route,
 	  { path: '/', component: _app2.default },
 	  _react2.default.createElement(_reactRouter.IndexRoute, { component: _App_Nav2.default }),
-	  _react2.default.createElement(_reactRouter.Route, { path: '/repos', component: _CommentBox2.default }),
-	  _react2.default.createElement(_reactRouter.Route, { path: '/about', component: _Users2.default })
+	  _react2.default.createElement(_reactRouter.Route, { path: '/repos', component: _CommentBox2.default })
 	);
-	//import Repo from './Repo';
 
 /***/ },
 /* 7 */
@@ -202,8 +199,8 @@
 	var IndexRoute = _require.IndexRoute;
 
 	var CommentBox = __webpack_require__(9);
-	//let Users = require("./routes/Users.jsx");
-	var NavBar = __webpack_require__(10);
+	var Text = __webpack_require__(10);
+	var NavBar = __webpack_require__(11);
 	//let appRoutes = require('./routes/routes.jsx');
 	//create the views, then route them, then use ajax calls
 
@@ -215,7 +212,8 @@
 	    return React.createElement(
 	      "div",
 	      null,
-	      React.createElement(NavBar, { action: "render", name: "Menu" })
+	      React.createElement(NavBar, { action: "render", name: "Menu" }),
+	      React.createElement(Text, null)
 	    );
 	  }
 
@@ -283,12 +281,53 @@
 
 	var React = __webpack_require__(3);
 
+	module.exports = React.createClass({
+	  displayName: "exports",
+
+
+	  render: function render() {
+	    return React.createElement(
+	      "div",
+	      { className: "col-sm-8 text-left" },
+	      React.createElement(
+	        "h1",
+	        null,
+	        "Welcome"
+	      ),
+	      React.createElement(
+	        "p",
+	        null,
+	        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+	      ),
+	      React.createElement("hr", null),
+	      React.createElement(
+	        "h3",
+	        null,
+	        "Test"
+	      ),
+	      React.createElement(
+	        "p",
+	        null,
+	        "Lorem ipsum..."
+	      )
+	    );
+	  }
+
+	});
+
+/***/ },
+/* 11 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	var React = __webpack_require__(3);
+
 	var NavBar = React.createClass({
 	  displayName: "NavBar",
 
 
 	  render: function render() {
-	    //        const name = "Navbar"
 	    return React.createElement(
 	      "div",
 	      { className: "container" },
@@ -385,31 +424,6 @@
 	};
 
 	module.exports = NavBar;
-
-/***/ },
-/* 11 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-
-	var React = __webpack_require__(3);
-
-	var Users = React.createClass({
-	    displayName: "Users",
-
-
-	    render: function render() {
-
-	        return React.createElement(
-	            "h2",
-	            null,
-	            "What What!"
-	        );
-	    }
-
-	});
-
-	module.exports = Users;
 
 /***/ }
 /******/ ]);

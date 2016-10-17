@@ -4,7 +4,7 @@ import App from '../app.jsx';
 import NavBar from './App_Nav.jsx';
 import CommentBox from './CommentBox.jsx';
 //import Repo from './Repo';
-import Users from './Users.jsx';
+//import Text from './Text.jsx';
 
 module.exports = (
   <Route path="/" component={App}>
@@ -12,6 +12,6 @@ module.exports = (
     <Route path="/repos" component={CommentBox}>
       {/*<Route path="/repos/:userName/:repoName" component={Repo}/>*/}
     </Route>
-    <Route path="/about" component={Users}/>
+    {/*<Route path="/about" component={Users}/>*/}
   </Route>
 );

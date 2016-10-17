@@ -58,8 +58,8 @@
 	var IndexRoute = _require.IndexRoute;
 
 	var CommentBox = __webpack_require__(235);
-	//let Users = require("./routes/Users.jsx");
-	var NavBar = __webpack_require__(236);
+	var Text = __webpack_require__(236);
+	var NavBar = __webpack_require__(237);
 	//let appRoutes = require('./routes/routes.jsx');
 	//create the views, then route them, then use ajax calls
 
@@ -71,7 +71,8 @@
 	    return React.createElement(
 	      "div",
 	      null,
-	      React.createElement(NavBar, { action: "render", name: "Menu" })
+	      React.createElement(NavBar, { action: "render", name: "Menu" }),
+	      React.createElement(Text, null)
 	    );
 	  }
 
@@ -27156,12 +27157,53 @@
 
 	var React = __webpack_require__(1);
 
+	module.exports = React.createClass({
+	  displayName: "exports",
+
+
+	  render: function render() {
+	    return React.createElement(
+	      "div",
+	      { className: "col-sm-8 text-left" },
+	      React.createElement(
+	        "h1",
+	        null,
+	        "Welcome"
+	      ),
+	      React.createElement(
+	        "p",
+	        null,
+	        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+	      ),
+	      React.createElement("hr", null),
+	      React.createElement(
+	        "h3",
+	        null,
+	        "Test"
+	      ),
+	      React.createElement(
+	        "p",
+	        null,
+	        "Lorem ipsum..."
+	      )
+	    );
+	  }
+
+	});
+
+/***/ },
+/* 237 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	var React = __webpack_require__(1);
+
 	var NavBar = React.createClass({
 	  displayName: "NavBar",
 
 
 	  render: function render() {
-	    //        const name = "Navbar"
 	    return React.createElement(
 	      "div",
 	      { className: "container" },
