@@ -6,7 +6,7 @@ import CommentBox from './CommentBox.jsx';
 //import Repo from './Repo';
 //import Text from './Text.jsx';
 
-module.exports = (
+const routes = (
   <Route path="/" component={App}>
     <IndexRoute component={NavBar}/>
     <Route path="/repos" component={CommentBox}>
@@ -14,4 +14,6 @@ module.exports = (
     </Route>
     {/*<Route path="/about" component={Users}/>*/}
   </Route>
-);
+)
+
+export default routes;

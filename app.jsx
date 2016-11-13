@@ -1,16 +1,14 @@
 "use strict";
-let React = require("react");
-let ReactDOM = require("react-dom");
-let { Router, Route, browserHistory, Link, IndexRoute } = require("react-router");
-let CommentBox = require("./routes/CommentBox.jsx");
-let Text = require("./routes/Text.jsx");
-let NavBar = require("./routes/App_Nav.jsx");
-//let appRoutes = require('./routes/routes.jsx');
-//create the views, then route them, then use ajax calls
+import React from "react";
+import ReactDOM from "react-dom";
+import { Router, Route, browserHistory, Link, IndexRoute } from "react-router";
+import CommentBox from "./routes/CommentBox.jsx";
+import Text from "./routes/Text.jsx";
+import NavBar from "./routes/App_Nav.jsx";
 
-let App = React.createClass({
+export default class App extends React.Component {
   
-  render: function(){
+  render (){
    return (
        <div>
         <NavBar action={"render"} name={"Menu"} />
@@ -19,6 +17,4 @@ let App = React.createClass({
        );
   }
   
-});
-
-module.exports = App;
+};

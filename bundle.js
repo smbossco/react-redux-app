@@ -46,39 +46,68 @@
 
 	"use strict";
 
-	var React = __webpack_require__(1);
-	var ReactDOM = __webpack_require__(34);
-
-	var _require = __webpack_require__(172);
-
-	var Router = _require.Router;
-	var Route = _require.Route;
-	var browserHistory = _require.browserHistory;
-	var Link = _require.Link;
-	var IndexRoute = _require.IndexRoute;
-
-	var CommentBox = __webpack_require__(235);
-	var Text = __webpack_require__(236);
-	var NavBar = __webpack_require__(237);
-	//let appRoutes = require('./routes/routes.jsx');
-	//create the views, then route them, then use ajax calls
-
-	var App = React.createClass({
-	  displayName: "App",
-
-
-	  render: function render() {
-	    return React.createElement(
-	      "div",
-	      null,
-	      React.createElement(NavBar, { action: "render", name: "Menu" }),
-	      React.createElement(Text, null)
-	    );
-	  }
-
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
 	});
 
-	module.exports = App;
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactDom = __webpack_require__(34);
+
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+
+	var _reactRouter = __webpack_require__(172);
+
+	var _CommentBox = __webpack_require__(235);
+
+	var _CommentBox2 = _interopRequireDefault(_CommentBox);
+
+	var _Text = __webpack_require__(236);
+
+	var _Text2 = _interopRequireDefault(_Text);
+
+	var _App_Nav = __webpack_require__(237);
+
+	var _App_Nav2 = _interopRequireDefault(_App_Nav);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var App = function (_React$Component) {
+	  _inherits(App, _React$Component);
+
+	  function App() {
+	    _classCallCheck(this, App);
+
+	    return _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).apply(this, arguments));
+	  }
+
+	  _createClass(App, [{
+	    key: "render",
+	    value: function render() {
+	      return _react2.default.createElement(
+	        "div",
+	        null,
+	        _react2.default.createElement(_App_Nav2.default, { action: "render", name: "Menu" }),
+	        _react2.default.createElement(_Text2.default, null)
+	      );
+	    }
+	  }]);
+
+	  return App;
+	}(_react2.default.Component);
+
+	exports.default = App;
+	;
 
 /***/ },
 /* 1 */

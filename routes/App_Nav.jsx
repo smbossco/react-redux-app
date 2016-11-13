@@ -1,6 +1,6 @@
-let React = require("react");
+const React = require("react");
 
-let NavBar = React.createClass({
+const NavBar = React.createClass({
     
     render: function(){
         return (<div className="container">

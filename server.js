@@ -4,8 +4,9 @@ const express = require('express'),
                 //http = require("http"),
                 React = require("react"),
                 { renderToString } = require('react-dom/server'),
-                { match, RouterContext } = require('react-router'),
-                routes = require('./routes/routes.jsx');
+                { match, RouterContext } = require('react-router');
+
+import routes from './routes/routes.jsx';
 
 //app.use(path.join(__dirname, "public"));
 
@@ -34,6 +35,9 @@ function renderPage(appHtml) {
     <title>React Router App</title>
     <link rel=stylesheet href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
     <div id=app>${appHtml}</div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    </html>
    `;
 }
 
