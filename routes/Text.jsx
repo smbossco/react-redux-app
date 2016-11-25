@@ -1,4 +1,4 @@
-let React = require("react");
+import React from 'react';
 
 module.exports = React.createClass({
   
@@ -10,7 +10,7 @@ module.exports = React.createClass({
       <hr />
       <h3>Test</h3>
       <p>Lorem ipsum...</p>
-    </div>)
+    </div>);
   }
   
 });

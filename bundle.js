@@ -27138,9 +27138,13 @@
 
 	"use strict";
 
-	var React = __webpack_require__(1);
+	var _react = __webpack_require__(1);
 
-	var CommentBox = React.createClass({
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var CommentBox = _react2.default.createClass({
 	  displayName: "CommentBox",
 
 	  getInitialState: function getInitialState() {
@@ -27150,7 +27154,7 @@
 	  },
 	  getUsers: function getUsers() {
 	    var list = this.state.users.map(function (item, i) {
-	      return React.createElement(
+	      return _react2.default.createElement(
 	        "li",
 	        { key: i, id: "comment" + (i.toString() + 1) },
 	        item
@@ -27159,15 +27163,15 @@
 	    return list;
 	  },
 	  render: function render() {
-	    return React.createElement(
+	    return _react2.default.createElement(
 	      "div",
 	      null,
-	      React.createElement(
+	      _react2.default.createElement(
 	        "p",
 	        null,
 	        "Comment"
 	      ),
-	      React.createElement(
+	      _react2.default.createElement(
 	        "ol",
 	        { className: "primary" },
 	        this.getUsers()
@@ -27184,33 +27188,37 @@
 
 	"use strict";
 
-	var React = __webpack_require__(1);
+	var _react = __webpack_require__(1);
 
-	module.exports = React.createClass({
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	module.exports = _react2.default.createClass({
 	  displayName: "exports",
 
 
 	  render: function render() {
-	    return React.createElement(
+	    return _react2.default.createElement(
 	      "div",
 	      { className: "col-sm-8 text-left" },
-	      React.createElement(
+	      _react2.default.createElement(
 	        "h1",
 	        null,
 	        "Welcome"
 	      ),
-	      React.createElement(
+	      _react2.default.createElement(
 	        "p",
 	        null,
 	        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
 	      ),
-	      React.createElement("hr", null),
-	      React.createElement(
+	      _react2.default.createElement("hr", null),
+	      _react2.default.createElement(
 	        "h3",
 	        null,
 	        "Test"
 	      ),
-	      React.createElement(
+	      _react2.default.createElement(
 	        "p",
 	        null,
 	        "Lorem ipsum..."
@@ -27226,91 +27234,95 @@
 
 	"use strict";
 
-	var React = __webpack_require__(1);
+	var _react = __webpack_require__(1);
 
-	var NavBar = React.createClass({
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var NavBar = _react2.default.createClass({
 	  displayName: "NavBar",
 
 
 	  render: function render() {
-	    return React.createElement(
+	    return _react2.default.createElement(
 	      "div",
 	      { className: "container" },
-	      React.createElement(
+	      _react2.default.createElement(
 	        "nav",
 	        { className: "navbar navbar-default" },
-	        React.createElement(
+	        _react2.default.createElement(
 	          "div",
 	          { className: "container-fluid" },
-	          React.createElement(
+	          _react2.default.createElement(
 	            "div",
 	            { className: "navbar-header" },
-	            React.createElement(
+	            _react2.default.createElement(
 	              "button",
 	              { type: "button", className: "navbar-toggle", "data-toggle": "collapse", "data-target": "#myNavbar" },
-	              React.createElement("span", { className: "icon-bar" }),
-	              React.createElement("span", { className: "icon-bar" }),
-	              React.createElement("span", { className: "icon-bar" })
+	              _react2.default.createElement("span", { className: "icon-bar" }),
+	              _react2.default.createElement("span", { className: "icon-bar" }),
+	              _react2.default.createElement("span", { className: "icon-bar" })
 	            ),
-	            React.createElement(
+	            _react2.default.createElement(
 	              "a",
 	              { className: "navbar-brand", href: "#" },
 	              "sPP"
 	            )
 	          ),
-	          React.createElement(
+	          _react2.default.createElement(
 	            "div",
 	            { className: "collapse navbar-collapse", id: "myNavbar" },
-	            React.createElement(
+	            _react2.default.createElement(
 	              "ul",
 	              { className: "nav navbar-nav" },
-	              React.createElement(
+	              _react2.default.createElement(
 	                "li",
 	                { className: "active" },
-	                React.createElement(
+	                _react2.default.createElement(
 	                  "a",
 	                  { href: "#" },
 	                  "Home"
 	                )
 	              ),
-	              React.createElement(
+	              _react2.default.createElement(
 	                "li",
 	                null,
-	                React.createElement(
+	                _react2.default.createElement(
 	                  "a",
 	                  { href: "#" },
 	                  "About"
 	                )
 	              ),
-	              React.createElement(
+	              _react2.default.createElement(
 	                "li",
 	                null,
-	                React.createElement(
+	                _react2.default.createElement(
 	                  "a",
 	                  { href: "#" },
 	                  "Projects"
 	                )
 	              ),
-	              React.createElement(
+	              _react2.default.createElement(
 	                "li",
 	                null,
-	                React.createElement(
+	                _react2.default.createElement(
 	                  "a",
 	                  { href: "#" },
 	                  "Contact"
 	                )
 	              )
 	            ),
-	            React.createElement(
+	            _react2.default.createElement(
 	              "ul",
 	              { className: "nav navbar-nav navbar-right" },
-	              React.createElement(
+	              _react2.default.createElement(
 	                "li",
 	                null,
-	                React.createElement(
+	                _react2.default.createElement(
 	                  "a",
 	                  { href: "#" },
-	                  React.createElement("span", { className: "glyphicon glyphicon-log-in" }),
+	                  _react2.default.createElement("span", { className: "glyphicon glyphicon-log-in" }),
 	                  " Login"
 	                )
 	              )
@@ -27324,8 +27336,8 @@
 	});
 
 	NavBar.proptypes = {
-	  name: React.PropTypes.string.isRequired,
-	  action: React.PropTypes.string
+	  name: _react2.default.PropTypes.string.isRequired,
+	  action: _react2.default.PropTypes.string
 	};
 
 	module.exports = NavBar;

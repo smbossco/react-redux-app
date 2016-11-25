@@ -1,6 +1,6 @@
-const React = require("react");
+import React from 'react';
 
-let CommentBox = React.createClass({
+const CommentBox = React.createClass({
   getInitialState: function(){
     return {
       users: ["Steve", "Stephie"]

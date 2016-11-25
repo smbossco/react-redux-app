@@ -46,23 +46,23 @@
 
 	'use strict';
 
-	var _routes = __webpack_require__(6);
+	var _routes = __webpack_require__(1);
 
 	var _routes2 = _interopRequireDefault(_routes);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var express = __webpack_require__(1);
+	var express = __webpack_require__(9);
 	var app = express();
-	var path = __webpack_require__(2);
+	var path = __webpack_require__(10);
 	//http = require("http"),
-	var React = __webpack_require__(3);
+	var React = __webpack_require__(2);
 
-	var _require = __webpack_require__(4);
+	var _require = __webpack_require__(11);
 
 	var renderToString = _require.renderToString;
 
-	var _require2 = __webpack_require__(5);
+	var _require2 = __webpack_require__(3);
 
 	var match = _require2.match;
 	var RouterContext = _require2.RouterContext;
@@ -80,15 +80,12 @@
 	    if (err) console.error;
 	    var appHtml = renderToString(React.createElement(RouterContext, props));
 
-	    // dump the HTML into a template, lots of ways to do this, but none are
-	    // really influenced by React Router, so we're just using a little
-	    // function, `renderPage`
 	    res.send(renderPage(appHtml));
 	  });
 	});
 
 	function renderPage(appHtml) {
-	  return '\n    <!doctype html public="storage">\n    <html>\n    <meta charset=utf-8/>\n    <title>React Router App</title>\n    <link rel=stylesheet href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">\n    <div id=app>' + appHtml + '</div>\n    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>\n    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>\n    </html>\n   ';
+	  return '\n    <!doctype html public="storage">\n    <html>\n    <meta charset=utf-8/>\n    <title>React Router App</title>\n    <link rel=stylesheet href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">\n    <div id=app>' + appHtml + '</div>\n    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>\n    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>\n    </html>\n   ';
 	}
 
 	var PORT = process.env.PORT;
@@ -97,62 +94,8 @@
 	  console.log('Production Express server running at localhost: ' + PORT);
 	});
 
-	/*
-	app.use(express.static(__dirname));
-
-	app.get('/', function(req, res){
-
-	    res.sendFile(path.join(__dirname, 'index.html'));
-	});
-
-	app.listen(process.env.PORT || port, function(){
-	    console.log("listening on port: " + process.env.PORT);
-	    console.log(__dirname);
-	});
-
-
-	/*
-	app.get('/', function(req, res){
-
-	    res.sendFile(path.join(__dirname, 'index.html'));
-	});
-
-	const server = http.createServer(app);
-
-	reload(server, app);*/
-
 /***/ },
 /* 1 */
-/***/ function(module, exports) {
-
-	module.exports = require("express");
-
-/***/ },
-/* 2 */
-/***/ function(module, exports) {
-
-	module.exports = require("path");
-
-/***/ },
-/* 3 */
-/***/ function(module, exports) {
-
-	module.exports = require("react");
-
-/***/ },
-/* 4 */
-/***/ function(module, exports) {
-
-	module.exports = require("react-dom/server");
-
-/***/ },
-/* 5 */
-/***/ function(module, exports) {
-
-	module.exports = require("react-router");
-
-/***/ },
-/* 6 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -161,13 +104,13 @@
 	  value: true
 	});
 
-	var _react = __webpack_require__(3);
+	var _react = __webpack_require__(2);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactRouter = __webpack_require__(5);
+	var _reactRouter = __webpack_require__(3);
 
-	var _app = __webpack_require__(7);
+	var _app = __webpack_require__(4);
 
 	var _app2 = _interopRequireDefault(_app);
 
@@ -175,7 +118,7 @@
 
 	var _App_Nav2 = _interopRequireDefault(_App_Nav);
 
-	var _CommentBox = __webpack_require__(9);
+	var _CommentBox = __webpack_require__(6);
 
 	var _CommentBox2 = _interopRequireDefault(_CommentBox);
 
@@ -194,7 +137,19 @@
 	exports.default = routes;
 
 /***/ },
-/* 7 */
+/* 2 */
+/***/ function(module, exports) {
+
+	module.exports = require("react");
+
+/***/ },
+/* 3 */
+/***/ function(module, exports) {
+
+	module.exports = require("react-router");
+
+/***/ },
+/* 4 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -205,21 +160,21 @@
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _react = __webpack_require__(3);
+	var _react = __webpack_require__(2);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactDom = __webpack_require__(10);
+	var _reactDom = __webpack_require__(5);
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _reactRouter = __webpack_require__(5);
+	var _reactRouter = __webpack_require__(3);
 
-	var _CommentBox = __webpack_require__(9);
+	var _CommentBox = __webpack_require__(6);
 
 	var _CommentBox2 = _interopRequireDefault(_CommentBox);
 
-	var _Text = __webpack_require__(11);
+	var _Text = __webpack_require__(7);
 
 	var _Text2 = _interopRequireDefault(_Text);
 
@@ -263,96 +218,202 @@
 	;
 
 /***/ },
+/* 5 */
+/***/ function(module, exports) {
+
+	module.exports = require("react-dom");
+
+/***/ },
+/* 6 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var CommentBox = _react2.default.createClass({
+	  displayName: "CommentBox",
+
+	  getInitialState: function getInitialState() {
+	    return {
+	      users: ["Steve", "Stephie"]
+	    };
+	  },
+	  getUsers: function getUsers() {
+	    var list = this.state.users.map(function (item, i) {
+	      return _react2.default.createElement(
+	        "li",
+	        { key: i, id: "comment" + (i.toString() + 1) },
+	        item
+	      );
+	    });
+	    return list;
+	  },
+	  render: function render() {
+	    return _react2.default.createElement(
+	      "div",
+	      null,
+	      _react2.default.createElement(
+	        "p",
+	        null,
+	        "Comment"
+	      ),
+	      _react2.default.createElement(
+	        "ol",
+	        { className: "primary" },
+	        this.getUsers()
+	      )
+	    );
+	  }
+	});
+
+	module.exports = CommentBox;
+
+/***/ },
+/* 7 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	module.exports = _react2.default.createClass({
+	  displayName: "exports",
+
+
+	  render: function render() {
+	    return _react2.default.createElement(
+	      "div",
+	      { className: "col-sm-8 text-left" },
+	      _react2.default.createElement(
+	        "h1",
+	        null,
+	        "Welcome"
+	      ),
+	      _react2.default.createElement(
+	        "p",
+	        null,
+	        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+	      ),
+	      _react2.default.createElement("hr", null),
+	      _react2.default.createElement(
+	        "h3",
+	        null,
+	        "Test"
+	      ),
+	      _react2.default.createElement(
+	        "p",
+	        null,
+	        "Lorem ipsum..."
+	      )
+	    );
+	  }
+
+	});
+
+/***/ },
 /* 8 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
 
-	var React = __webpack_require__(3);
+	var _react = __webpack_require__(2);
 
-	var NavBar = React.createClass({
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var NavBar = _react2.default.createClass({
 	  displayName: "NavBar",
 
 
 	  render: function render() {
-	    return React.createElement(
+	    return _react2.default.createElement(
 	      "div",
 	      { className: "container" },
-	      React.createElement(
+	      _react2.default.createElement(
 	        "nav",
 	        { className: "navbar navbar-default" },
-	        React.createElement(
+	        _react2.default.createElement(
 	          "div",
 	          { className: "container-fluid" },
-	          React.createElement(
+	          _react2.default.createElement(
 	            "div",
 	            { className: "navbar-header" },
-	            React.createElement(
+	            _react2.default.createElement(
 	              "button",
 	              { type: "button", className: "navbar-toggle", "data-toggle": "collapse", "data-target": "#myNavbar" },
-	              React.createElement("span", { className: "icon-bar" }),
-	              React.createElement("span", { className: "icon-bar" }),
-	              React.createElement("span", { className: "icon-bar" })
+	              _react2.default.createElement("span", { className: "icon-bar" }),
+	              _react2.default.createElement("span", { className: "icon-bar" }),
+	              _react2.default.createElement("span", { className: "icon-bar" })
 	            ),
-	            React.createElement(
+	            _react2.default.createElement(
 	              "a",
 	              { className: "navbar-brand", href: "#" },
 	              "sPP"
 	            )
 	          ),
-	          React.createElement(
+	          _react2.default.createElement(
 	            "div",
 	            { className: "collapse navbar-collapse", id: "myNavbar" },
-	            React.createElement(
+	            _react2.default.createElement(
 	              "ul",
 	              { className: "nav navbar-nav" },
-	              React.createElement(
+	              _react2.default.createElement(
 	                "li",
 	                { className: "active" },
-	                React.createElement(
+	                _react2.default.createElement(
 	                  "a",
 	                  { href: "#" },
 	                  "Home"
 	                )
 	              ),
-	              React.createElement(
+	              _react2.default.createElement(
 	                "li",
 	                null,
-	                React.createElement(
+	                _react2.default.createElement(
 	                  "a",
 	                  { href: "#" },
 	                  "About"
 	                )
 	              ),
-	              React.createElement(
+	              _react2.default.createElement(
 	                "li",
 	                null,
-	                React.createElement(
+	                _react2.default.createElement(
 	                  "a",
 	                  { href: "#" },
 	                  "Projects"
 	                )
 	              ),
-	              React.createElement(
+	              _react2.default.createElement(
 	                "li",
 	                null,
-	                React.createElement(
+	                _react2.default.createElement(
 	                  "a",
 	                  { href: "#" },
 	                  "Contact"
 	                )
 	              )
 	            ),
-	            React.createElement(
+	            _react2.default.createElement(
 	              "ul",
 	              { className: "nav navbar-nav navbar-right" },
-	              React.createElement(
+	              _react2.default.createElement(
 	                "li",
 	                null,
-	                React.createElement(
+	                _react2.default.createElement(
 	                  "a",
 	                  { href: "#" },
-	                  React.createElement("span", { className: "glyphicon glyphicon-log-in" }),
+	                  _react2.default.createElement("span", { className: "glyphicon glyphicon-log-in" }),
 	                  " Login"
 	                )
 	              )
@@ -366,105 +427,29 @@
 	});
 
 	NavBar.proptypes = {
-	  name: React.PropTypes.string.isRequired,
-	  action: React.PropTypes.string
+	  name: _react2.default.PropTypes.string.isRequired,
+	  action: _react2.default.PropTypes.string
 	};
 
 	module.exports = NavBar;
 
 /***/ },
 /* 9 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ function(module, exports) {
 
-	"use strict";
-
-	var React = __webpack_require__(3);
-
-	var CommentBox = React.createClass({
-	  displayName: "CommentBox",
-
-	  getInitialState: function getInitialState() {
-	    return {
-	      users: ["Steve", "Stephie"]
-	    };
-	  },
-	  getUsers: function getUsers() {
-	    var list = this.state.users.map(function (item, i) {
-	      return React.createElement(
-	        "li",
-	        { key: i, id: "comment" + (i.toString() + 1) },
-	        item
-	      );
-	    });
-	    return list;
-	  },
-	  render: function render() {
-	    return React.createElement(
-	      "div",
-	      null,
-	      React.createElement(
-	        "p",
-	        null,
-	        "Comment"
-	      ),
-	      React.createElement(
-	        "ol",
-	        { className: "primary" },
-	        this.getUsers()
-	      )
-	    );
-	  }
-	});
-
-	module.exports = CommentBox;
+	module.exports = require("express");
 
 /***/ },
 /* 10 */
 /***/ function(module, exports) {
 
-	module.exports = require("react-dom");
+	module.exports = require("path");
 
 /***/ },
 /* 11 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ function(module, exports) {
 
-	"use strict";
-
-	var React = __webpack_require__(3);
-
-	module.exports = React.createClass({
-	  displayName: "exports",
-
-
-	  render: function render() {
-	    return React.createElement(
-	      "div",
-	      { className: "col-sm-8 text-left" },
-	      React.createElement(
-	        "h1",
-	        null,
-	        "Welcome"
-	      ),
-	      React.createElement(
-	        "p",
-	        null,
-	        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-	      ),
-	      React.createElement("hr", null),
-	      React.createElement(
-	        "h3",
-	        null,
-	        "Test"
-	      ),
-	      React.createElement(
-	        "p",
-	        null,
-	        "Lorem ipsum..."
-	      )
-	    );
-	  }
-
-	});
+	module.exports = require("react-dom/server");
 
 /***/ }
 /******/ ]);

@@ -20,9 +20,7 @@ app.get('*', (req, res) => {
     if (err) console.error;
     const appHtml = renderToString(<RouterContext {...props}/>);
 
-    // dump the HTML into a template, lots of ways to do this, but none are
-    // really influenced by React Router, so we're just using a little
-    // function, `renderPage`
+
     res.send(renderPage(appHtml));
   });
 });
@@ -35,8 +33,8 @@ function renderPage(appHtml) {
     <title>React Router App</title>
     <link rel=stylesheet href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
     <div id=app>${appHtml}</div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
     </html>
    `;
 }
@@ -46,27 +44,3 @@ const PORT = process.env.PORT;
 app.listen(PORT, function() {
   console.log('Production Express server running at localhost: ' + PORT);
 });
-
-/*
-app.use(express.static(__dirname));
-
-app.get('/', function(req, res){
-
-    res.sendFile(path.join(__dirname, 'index.html'));
-});
-
-app.listen(process.env.PORT || port, function(){
-    console.log("listening on port: " + process.env.PORT);
-    console.log(__dirname);
-});
-
-
-/*
-app.get('/', function(req, res){
-
-    res.sendFile(path.join(__dirname, 'index.html'));
-});
-
-const server = http.createServer(app);
-
-reload(server, app);*/
